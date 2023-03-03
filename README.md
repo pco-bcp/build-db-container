@@ -28,6 +28,8 @@ at ghcr.io. You need to log in first using your PAT (personal access token).:
 Now push it up:
 
 `docker push ghcr.io/impact-canada/ici-database:latest`
+or
+`docker push ghcr.io/pco-bcp/pm-database:latest`
 
 ## To view your GitHub Container Registry
 
