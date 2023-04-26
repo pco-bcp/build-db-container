@@ -15,21 +15,32 @@ when the server starts.
 
 ## How to use it
 
-First copy your sql file into this directory, then run the build command similar to the example below.
+First copy your sql file into this directory (the actual root directory of this repo). It can have any name but
+must end with a .sql suffix.
+
+Then run the build command similar to the example below.
 This command will build an image with the given name and tag it as `latest` and leave it in your local registry.
 
 `docker build --tag ghcr.io/impact-canada/ici-database .`
 
-Next you push it up to the container registry. In this example we will use the GitHub Container Registry
+It's good to have the image tagged as both 'latest' and the date of the image. So let's add a date tag now.
+Use this command, with the current date:
+
+`docker tag ghcr.io/impact-canada/ici-database:latest ghcr.io/impact-canada/ici-database:2023-04-26`
+
+Next you push both images up to the container registry (it's actually the same image with two tags).
+In this example we will use the GitHub Container Registry
 at ghcr.io. You need to log in first using your PAT (personal access token).:
 
 `echo "your-token" | docker login ghcr.io -u USERNAME --password-stdin`
 
-Now push it up:
+Now push them up:
 
 `docker push ghcr.io/impact-canada/ici-database:latest`<br>
+`docker push ghcr.io/impact-canada/ici-database:2023-04-16`<br>
 or<br>
-`docker push ghcr.io/pco-bcp/pm-database:latest`
+`docker push ghcr.io/pco-bcp/pm-database:latest`<br>
+`docker push ghcr.io/pco-bcp/pm-database:2023-04-26`
 
 ## To view your GitHub Container Registry
 
