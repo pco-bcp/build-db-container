@@ -21,12 +21,12 @@ must end with a .sql suffix.
 Then run the build command similar to the example below.
 This command will build an image with the given name and tag it as `latest` and leave it in your local registry.
 
-`docker build --tag ghcr.io/impact-canada/ici-database .`
+`docker build --tag ghcr.io/pco-bcp/ici-database .`
 
 It's good to have the image tagged as both 'latest' and the date of the image. So let's add a date tag now.
 Use this command, with the current date:
 
-`docker tag ghcr.io/impact-canada/ici-database:latest ghcr.io/impact-canada/ici-database:2023-04-26`
+`docker tag ghcr.io/pco-bcp/ici-database:latest ghcr.io/impact-canada/ici-database:2023-04-26`
 
 Next you push both images up to the container registry (it's actually the same image with two tags).
 In this example we will use the GitHub Container Registry
@@ -36,8 +36,8 @@ at ghcr.io. You need to log in first using your PAT (personal access token).:
 
 Now push them up:
 
-`docker push ghcr.io/impact-canada/ici-database:latest`<br>
-`docker push ghcr.io/impact-canada/ici-database:2023-04-16`<br>
+`docker push ghcr.io/pco-bcpa/ici-database:latest`<br>
+`docker push ghcr.io/pco-bcp/ici-database:2023-04-16`<br>
 or<br>
 `docker push ghcr.io/pco-bcp/pm-database:latest`<br>
 `docker push ghcr.io/pco-bcp/pm-database:2023-04-26`
