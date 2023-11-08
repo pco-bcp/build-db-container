@@ -36,7 +36,7 @@ at ghcr.io. You need to log in first using your PAT (personal access token).:
 
 Now push them up:
 
-`docker push ghcr.io/pco-bcpa/ici-database:latest`<br>
+`docker push ghcr.io/pco-bcp/ici-database:latest`<br>
 `docker push ghcr.io/pco-bcp/ici-database:2023-04-16`<br>
 or<br>
 `docker push ghcr.io/pco-bcp/pm-database:latest`<br>
